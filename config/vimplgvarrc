@@ -1,0 +1,153 @@
+"""""""""""""" Rainbow Paraenthesis """""""""""""""""""""
+
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+
+"""""""""""""" Rainbow Paraenthesis """""""""""""""""""""
+
+
+"""""""""""""" TagBar """""""""""""""""""""
+
+nmap <F8> :TagbarToggle<CR>
+let Tlist_Use_Right_Window = 1
+
+"""""""""""""" Tagbar """""""""""""""""""""
+
+
+"""""""""""""" CtrlP """""""""""""""""""""
+
+"" Change the default mapping and the default command to invoke CtrlP:
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"" 'c' - the directory of the current file.
+"" 'r' - the nearest ancestor that contains one of these directories or files: .git .hg .svn .bzr _darcs
+"" 'a' - like c, but only if the current working directory outside of CtrlP is not a direct ancestor of the directory of the current file.
+"" 0 or '' (empty string) - disable this feature.
+"" 
+"" Define additional root markers with the g:ctrlp_root_markers option.
+let g:ctrlp_working_path_mode = 'ra'
+
+"" Exclude files and directories using Vim's wildignore and CtrlP's own g:ctrlp_custom_ignore
+"set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+"set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+"
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"let g:ctrlp_custom_ignore = {
+"  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+"  \ 'file': '\v\.(exe|so|dll)$',
+"  \ 'link': 'some_bad_symbolic_links',
+"  \ }
+
+"" Use a custom file listing command:
+let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+"let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'  " Windows
+
+"""""""""""""" CtrlP """""""""""""""""""""
+
+
+"""""""""""""" Syntastic """""""""""""""""""""
+
+"" g:syntastic_c_compiler (string; default: 'gcc', or 'clang' if GCC is not found)
+"" Compiler executable.
+
+"" g:syntastic_c_errorformat (string; default: unset)
+"" Override for the default errorformat.
+
+let g:syntastic_c_remove_include_errors = 1 " (boolean; default: 0)
+"" By default, errors in files included from the file being checked are shown. Set this variable to 1 to remove messages about errors in included files. Please note that this means syntastic will silently abort checks if there are fatal errors in one of the included files.
+
+"" g:syntastic_c_compiler_options (string; default: '-std=gnu99')
+"" Compilation flags (such as defines or include directories) to be passed to the checker.
+
+"" g:syntastic_c_config_file (string; default: '.syntastic_c_config')
+"" File containing additional compilation flags to be passed to the checker, one option per line.
+
+"" g:syntastic_c_include_dirs (array of strings; default: [])
+"" Include directories to be passed to the checker, in addition to the above compilation flags. You can set this to something like ['includes', 'headers'], and the corresponding -Iincludes -Iheaders will be added to the compilation flags.
+
+"" g:syntastic_c_no_default_include_dirs (boolean; default: 0)
+"" By default syntastic adds a number of common include directories to the compilation flags, namely -I. -I.. -Iinclude -Iincludes -I../include -I../includes. You can disable this behaviour by setting the above variable to 1.
+
+let g:syntastic_c_no_include_search = 1 " (boolean; default: 0)
+"" By default syntastic looks at the first 100 lines of the file being checked, and tries to determine if it needs to include headers for some common libraries, such as glib or gtk. It then tries to add the corresponding include directories to the compilation flags. You can disable this behaviour by setting the above variable to 1.
+
+"" g:syntastic_c_auto_refresh_includes (boolean; default: 0)
+"" Used only if g:syntastic_c_no_include_search is set to a false value. By default syntastic searches for common libraries only the first time the current file is checked. Setting the above variable to 1 instructs syntastic to refresh the list of common libraries every time the current file is checked. You can also force a refresh even when the above variable is 0, by unlet-ing the buffer variable b:syntastic_c_includes.
+
+"" b:syntastic_c_cflags (string; default: unset)
+"" Buffer-local variable. When set, no search for common libraries is performed, and the contents of the variable are added to the compilation flags.
+
+"" g:syntastic_c_check_header (boolean; default: 0)
+"" If the current file is a header (namely if its extension is h), all checks are silently skipped. You can force syntastic to check header files by setting the above variable to 1.
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+"""""""""""""" Syntastic """""""""""""""""""""
+
+
+"""""""""""""" Airline """"""""""""""""""""""""
+
+set t_Co=256			" For colors in status bars
+let g:airline_powerline_fonts = 0  " For powerline font support
+let g:airline#extensions#tabline#enabled = 1  " Enable above status line
+let g:airline#extensions#tabline#fnamemod = ':t'  " Show just the filename on above statusline
+let g:airline_theme = 'base16_tomorrow'		" Theme to set
+
+"""""""""""""" Airline """"""""""""""""""""""""
+
+
+"""""""""""""" Common """"""""""""""""""""""""
+
+filetype plugin on
+"autocmd BufEnter * lcd %:p:h 			"" Switch CWD to currents files dir
+set hlsearch
+set cindent
+set incsearch
+
+"""""""""""""" Common """"""""""""""""""""""""
