@@ -149,5 +149,6 @@ filetype plugin on
 set hlsearch
 set cindent
 set incsearch
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
 """""""""""""" Common """"""""""""""""""""""""
