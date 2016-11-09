@@ -48,12 +48,15 @@ Plugin 'https://github.com/ervandew/supertab.git'
 Plugin 'https://github.com/tpope/vim-surround.git'
 Plugin 'https://github.com/vim-syntastic/syntastic.git'
 Plugin 'https://github.com/majutsushi/tagbar.git'
+Plugin 'https://github.com/xolox/vim-misc.git'
 Plugin 'https://github.com/xolox/vim-easytags.git'
 Plugin 'https://github.com/vim-scripts/tagexplorer.vim.git'
 Plugin 'https://github.com/vim-scripts/taglist.vim.git'
 Plugin 'https://github.com/vim-scripts/vcscommand.vim.git'
 Plugin 'https://github.com/vim-scripts/winmanager--Fox.git'
-Plugin 'git://github.com/millermedeiros/vim-statline.git' 
+Plugin 'https://github.com/erikw/tmux-powerline.git'
+Plugin 'https://github.com/millermedeiros/vim-statline.git'
+
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
