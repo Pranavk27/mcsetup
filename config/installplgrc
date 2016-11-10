@@ -38,7 +38,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'https://github.com/mbbill/code_complete.git'
-Plugin 'file:///root/myscripts/vimplugins/cscope_map'
 Plugin 'https://github.com/kien/ctrlp.vim.git'
 Plugin 'https://github.com/spolu/dwm.vim.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
@@ -56,7 +55,8 @@ Plugin 'https://github.com/vim-scripts/vcscommand.vim.git'
 Plugin 'https://github.com/vim-scripts/winmanager--Fox.git'
 Plugin 'https://github.com/erikw/tmux-powerline.git'
 Plugin 'https://github.com/millermedeiros/vim-statline.git'
-
+Plugin 'https://github.com/vim-scripts/cscope.vim.git'
+Plugin 'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
