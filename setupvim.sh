@@ -82,6 +82,7 @@ function setup_vimrc()
 
 				#Last line vimrc
 				sed -i "\$asource \"$CONFIGPATH/setupplgrc\"" $VIMRC
+				sed -i 's#XMYPLUGINX#Plugin \x27file:///$CONFIGPATH/devplugin\x27#g' config/installplgrc
 }
 
 function setup_plugins()
