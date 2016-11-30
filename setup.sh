@@ -5,7 +5,7 @@ PLUGINLIST="omz_zsh tpowerline ycmd font"
 CONFIGPATH="$HOME/myscripts/config"
 PACKAGEFILE="$HOME/myscripts/packages"
 
-source $HOME/myscripts/setupvim.sh
+source $HOME/myscripts/plgsetup
 
 function package_present()
 {
