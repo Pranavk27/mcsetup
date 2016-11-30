@@ -14,6 +14,7 @@ function package_present()
 
 function packages_install()
 {
+				PACKAGES=$*
 				for PACKAGE in $PACKAGES;
 				do
 				echo ">> Check $PACKAGE is present <<"
