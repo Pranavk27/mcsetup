@@ -57,6 +57,7 @@ Plugin 'https://github.com/erikw/tmux-powerline.git'
 Plugin 'https://github.com/millermedeiros/vim-statline.git'
 Plugin 'https://github.com/vim-scripts/cscope.vim.git'
 Plugin 'https://github.com/Xuyuanp/nerdtree-git-plugin.git'
+Plugin 'file:///root/myscripts/devplugin'
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
