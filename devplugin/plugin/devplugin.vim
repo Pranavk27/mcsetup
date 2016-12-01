@@ -27,11 +27,6 @@ command! -nargs=0 AdjustPane call s:AdjustPane()
 command! -nargs=0 MaximizePane call s:MaximizePane()
 "" }}
 
-"" Mappings {{
-nnoremap <F2> :DevPaneToggle<CR>
-nnoremap <F3> :AdjustPane<CR>
-nnoremap <F4> :MaximizePane<CR>
-"" }}
 
 function! s:MaximizePane()
 				if !g:is_maximized_pane
