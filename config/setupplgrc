@@ -139,7 +139,11 @@ set cindent
 set incsearch
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 runtime! ftplugin/man.vim
-
+setlocal spell
+let g:completekey="<C-c>"
+let g:UltiSnipsExpandTrigger="<C-u>"
+imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
 
 """""""""""""" Main
 source $HOME/.projectrc
