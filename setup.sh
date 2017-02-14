@@ -5,7 +5,11 @@ PLUGINLIST="omz_zsh tpowerline ycmd font"
 CONFIGPATH="$HOME/myscripts/config"
 PACKAGEFILE="$HOME/myscripts/packages"
 
+<<<<<<< HEAD
 source $HOME/myscripts/setupvim.sh
+=======
+source $HOME/myscripts/plgsetup
+>>>>>>> 6686fb2deda401ec92da69ebc3d9cac0ed6ae13b
 
 function package_present()
 {
@@ -14,6 +18,10 @@ function package_present()
 
 function packages_install()
 {
+<<<<<<< HEAD
+=======
+				PACKAGES=$*
+>>>>>>> 6686fb2deda401ec92da69ebc3d9cac0ed6ae13b
 				for PACKAGE in $PACKAGES;
 				do
 				echo ">> Check $PACKAGE is present <<"
@@ -27,7 +35,10 @@ function packages_install()
 				done
 }
 
+<<<<<<< HEAD
 echo "Installing Packages"
+=======
+>>>>>>> 6686fb2deda401ec92da69ebc3d9cac0ed6ae13b
 packages_install `cat $PACKAGEFILE` 
 packages_install vim  
 setup_vimrc

@@ -1,6 +1,9 @@
 vim
+<<<<<<< HEAD
 tmux
 zsh
+=======
+>>>>>>> 6686fb2deda401ec92da69ebc3d9cac0ed6ae13b
 ctags
 fontforge
 ttfautohint
@@ -8,3 +11,7 @@ strace
 git
 iftop
 ltrace
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6686fb2deda401ec92da69ebc3d9cac0ed6ae13b
