@@ -143,5 +143,4 @@ runtime! ftplugin/man.vim
 
 
 """""""""""""" Main
-source $HOME/.projectrc
 
